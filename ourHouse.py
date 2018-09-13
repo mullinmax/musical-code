@@ -1,0 +1,1 @@
+ourHouse.position = street.length / 2;
