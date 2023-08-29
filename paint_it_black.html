@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint It Black</title>
+    <style>
+        /* The door structure */
+        .door {
+            height: 200px;
+            width: 100px;
+            border: 3px solid #333;
+            cursor: pointer;
+            transition: background-color 1s; /* Smooth transition effect */
+        }
+
+        /* The door's initial color */
+        .door[data-color="red"] {
+            background-color: red;
+        }
+
+        /* Painted black */
+        .door[data-color="black"] {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="door" data-color="red"></div>
+
+<script>
+    // Locate the door element
+    const door = document.querySelector('.door');
+
+    // Event listener to paint the door black when clicked
+    door.addEventListener('click', () => {
+        if (door.getAttribute('data-color') === 'red') {
+            door.setAttribute('data-color', 'black');
+        }
+    });
+</script>
+
+</body>
+</html>
